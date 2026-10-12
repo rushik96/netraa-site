@@ -1,18 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 64" role="img" aria-label="Netraa.ai">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 64" role="img" aria-label="Netraa.ai">
   <defs>
-    <linearGradient id="nl-lid" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0F4C4A"/>
+    <linearGradient id="nl-tube" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#14605B"/>
       <stop offset="1" stop-color="#0A2E33"/>
     </linearGradient>
-    <radialGradient id="nl-iris" cx=".4" cy=".35" r=".75">
+    <radialGradient id="nl-bell" cx=".38" cy=".35" r=".8">
       <stop offset="0" stop-color="#FFC94A"/>
       <stop offset=".6" stop-color="#F29A1F"/>
       <stop offset="1" stop-color="#D9480F"/>
     </radialGradient>
   </defs>
-  <path d="M32 58c-6-4-9-9-9-14 4 1 7 4 9 8 2-4 5-7 9-8 0 5-3 10-9 14z" fill="#F29A1F" opacity=".9"/>
-  <path d="M4 32C13 17 22 11 32 11s19 6 28 21c-9 15-18 21-28 21S13 47 4 32z" fill="url(#nl-lid)"/>
-  <circle cx="32" cy="32" r="12" fill="url(#nl-iris)"/>
-  <path d="M30 25h4v5h5v4h-5v5h-4v-5h-5v-4h5z" fill="#FFF8EC"/>
-  <text x="74" y="43" font-family="Fraunces, Georgia, serif" font-size="36" font-weight="600" fill="#0A2E33" letter-spacing="-0.5">netraa<tspan fill="#E07A12">.ai</tspan></text>
+  <path d="M24 41.5 14.6 32.6c-4.4-4.2-3.4-11.6 2.4-13.2 3-.8 5.5.5 7 2.9 1.5-2.4 4-3.7 7-2.9 5.8 1.6 6.8 9 2.4 13.2z" fill="#F29A1F" opacity=".22"/>
+  <path d="M12.5 7.5C5.5 11 4 22 11 30.5L24 44l13-13.5c7-8.5 5.5-19.5-1.5-23" fill="none" stroke="url(#nl-tube)" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M24 44c0 9 6.5 13.5 14 13.5 9 0 15-5.5 15-15.5v-3" fill="none" stroke="url(#nl-tube)" stroke-width="4.2" stroke-linecap="round"/>
+  <circle cx="12.5" cy="7" r="3.2" fill="#0A2E33"/>
+  <circle cx="35.5" cy="7" r="3.2" fill="#0A2E33"/>
+  <circle cx="53" cy="31.5" r="8.5" fill="url(#nl-bell)"/>
+  <circle cx="53" cy="31.5" r="8.5" fill="none" stroke="#0A2E33" stroke-width="2"/>
+  <path d="M51.6 27.3h2.8v2.8h2.8v2.8h-2.8v2.8h-2.8v-2.8h-2.8v-2.8h2.8z" fill="#FFF8EC"/>
+  <text x="76" y="43" font-family="Fraunces, Georgia, serif" font-size="36" font-weight="600" fill="#0A2E33" letter-spacing="-0.5">netraa<tspan fill="#E07A12">.ai</tspan></text>
 </svg>

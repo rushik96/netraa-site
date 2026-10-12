@@ -77,3 +77,12 @@ Replace these with real partner-hospital quotes before launch.
 The visitor's browser language is detected automatically, and they can switch with the globe menu. You can also link to a language directly with `?lang=es`, `?lang=fr` or `?lang=it`, which is useful for ads.
 
 To add a language, copy the `es` block in `js/i18n.js`, translate it, and add the language to `languages` in `js/data.js`.
+
+## Hosting on Replit
+
+The repo includes a `.replit` file, so it's ready to import:
+
+1. In Replit, choose **Create App → Import from GitHub** and pick `netraa-site`.
+2. Press **Run** to preview it.
+3. Open **Deploy → Static**, with public directory `./` and no build command, then publish.
+4. Under the deployment's **Settings → Link a domain**, add `netraa.ai` and copy the DNS records Replit shows into your domain registrar.

@@ -1,0 +1,13 @@
+# Replit configuration for the Netraa.ai static site.
+# "Run" in the workspace serves a local preview; "Deploy" publishes it as a static site.
+modules = ["python-3.11"]
+run = "python3 -m http.server 8080"
+entrypoint = "index.html"
+
+[[ports]]
+localPort = 8080
+externalPort = 80
+
+[deployment]
+deploymentTarget = "static"
+publicDir = "./"

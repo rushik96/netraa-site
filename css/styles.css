@@ -441,3 +441,11 @@ textarea { resize: vertical; }
   .hero-cta .btn { width: 100%; }
   .mandala { width: 520px; right: -260px; }
 }
+@media (max-width: 420px) {
+  .brand { font-size: 1.3rem; gap: .4rem; }
+  .brand img { width: 32px; height: 32px; }
+  .lang svg { display: none; }
+  .lang select { max-width: 96px; font-size: .8rem; padding-left: .6em; }
+  .nav-toggle { width: 38px; }
+  .nav-toggle span { left: 8px; }
+}
