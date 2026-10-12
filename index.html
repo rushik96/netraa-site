@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Netraa.ai | Skip the waiting list. World-class treatment in India.</title>
+  <meta name="description" content="Tired of long waiting lists or huge medical bills? Netraa arranges treatment at accredited hospitals in India's top cities for 60–90% less, with flights, hotel and a personal care companion included.">
+  <meta name="theme-color" content="#0A2E33">
+  <link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
+  <meta property="og:title" content="Netraa.ai | Skip the waiting list">
+  <meta property="og:description" content="Compare what treatment costs at home with India's top hospitals, then let us plan the whole trip.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="top">
+  <div class="container nav-inner">
+    <a href="#top" class="brand" aria-label="Netraa.ai home">
+      <img src="assets/logo-mark.svg" alt="" width="38" height="38">
+      <span>netraa<em>.ai</em></span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#compare" data-i18n="nav.compare">Compare prices</a>
+      <a href="#treatments" data-i18n="nav.treatments">Treatments</a>
+      <a href="#journey" data-i18n="nav.how">How it works</a>
+      <a href="#stay" data-i18n="nav.hotels">Hotels</a>
+      <a href="#packages" data-i18n="nav.packages">Packages</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      <a href="#quote" class="btn btn-sm btn-primary" data-i18n="nav.cta">Get a free quote</a>
+    </nav>
+    <div class="nav-right">
+      <label class="lang" aria-label="Language">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg>
+        <select id="langSelect"></select>
+      </label>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="glow g1"></div><div class="glow g2"></div>
+    <svg class="mandala" viewBox="0 0 400 400"><g fill="none" stroke="currentColor" stroke-width="1">
+      <circle cx="200" cy="200" r="60"/><circle cx="200" cy="200" r="110"/><circle cx="200" cy="200" r="160"/><circle cx="200" cy="200" r="195"/>
+      <g id="petal"><path d="M200 40c22 30 22 90 0 120-22-30-22-90 0-120z"/></g>
+      <use href="#petal" transform="rotate(30 200 200)"/><use href="#petal" transform="rotate(60 200 200)"/><use href="#petal" transform="rotate(90 200 200)"/>
+      <use href="#petal" transform="rotate(120 200 200)"/><use href="#petal" transform="rotate(150 200 200)"/><use href="#petal" transform="rotate(180 200 200)"/>
+      <use href="#petal" transform="rotate(210 200 200)"/><use href="#petal" transform="rotate(240 200 200)"/><use href="#petal" transform="rotate(270 200 200)"/>
+      <use href="#petal" transform="rotate(300 200 200)"/><use href="#petal" transform="rotate(330 200 200)"/>
+    </g></svg>
+  </div>
+
+  <div class="container hero-grid">
+    <div class="hero-copy reveal">
+      <p class="eyebrow" data-i18n="hero.eyebrow">Atithi Devo Bhava · Where every guest is family</p>
+      <h1 data-i18n="hero.title">Skip the waiting list.<br>Top hospitals in India.<br><span class="hl">Up to 90% less.</span></h1>
+      <p class="lead" data-i18n="hero.lead">Netraa arranges treatment at accredited hospitals in India's top cities and handles everything else: visa, flights, a hotel close to the hospital, and a personal care companion from the moment you land until you fly home.</p>
+      <div class="hero-cta">
+        <a href="#compare" class="btn btn-primary btn-lg" data-i18n="hero.cta1">Compare my costs</a>
+        <a href="#quote" class="btn btn-ghost btn-lg" data-i18n="hero.cta2">Free doctor review →</a>
+      </div>
+      <ul class="hero-stats">
+        <li><strong>60–90%</strong><span data-i18n="hero.s1">lower cost than private care at home</span></li>
+        <li><strong data-i18n="hero.s2n">Days</strong><span data-i18n="hero.s2">to get a surgery date, not months</span></li>
+        <li><strong>24/7</strong><span data-i18n="hero.s3">support from a personal care companion</span></li>
+      </ul>
+    </div>
+
+    <div class="hero-card reveal" aria-label="Example price comparison">
+      <div class="hc-head">
+        <span class="chip" data-i18n="hc.example">Example</span>
+        <span id="hTreat">Total knee replacement</span>
+      </div>
+      <div class="hc-row">
+        <span id="hHomeLabel">United States, private</span>
+        <strong id="hHome">$40,000</strong>
+      </div>
+      <div class="hc-bar"><i style="width:100%"></i></div>
+      <div class="hc-row">
+        <span>🇮🇳 <span data-i18n="hc.india">Chennai, accredited hospital</span></span>
+        <strong class="saffron" id="hIndia">$5,115</strong>
+      </div>
+      <div class="hc-bar india"><i id="hBar" style="width:13%"></i></div>
+      <div class="hc-row muted">
+        <span data-i18n="hc.extras">+ flights for 2, 14-night stay, visas, Signature package</span>
+        <strong id="hExtras">$4,779</strong>
+      </div>
+      <div class="hc-save">
+        <span data-i18n="hc.save">You save, even with the whole trip included</span>
+        <strong id="hSave">$30,106</strong>
+      </div>
+      <div class="hc-foot">
+        <span class="dot"></span> <span data-i18n="hc.foot">Welcomed at the airport with a marigold garland 🌼</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="container trust reveal">
+    <span data-i18n="trust.1">JCI &amp; NABH accredited hospitals</span>
+    <span data-i18n="trust.2">Surgeons trained in the US and UK</span>
+    <span data-i18n="trust.3">Medical visa support</span>
+    <span data-i18n="trust.4">Fixed, written quotes</span>
+    <span data-i18n="trust.5">90-day follow-up</span>
+  </div>
+</section>
+
+<!-- ============ MARKETS / WAITING LISTS ============ -->
+<section class="section markets-sec" id="waiting">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow" data-i18n="mk.eyebrow">Why patients are choosing India</p>
+      <h2 data-i18n="mk.title">Waiting lists are getting longer at home. <em>In India, surgery is days away.</em></h2>
+      <p data-i18n="mk.lead">The same operation, done by an experienced surgeon at an accredited hospital, without months of waiting or a bill that wipes out your savings. Choose your country to see your numbers.</p>
+    </div>
+    <div class="market-grid reveal" id="marketGrid"></div>
+  </div>
+</section>
+
+<!-- ============ COMPARE ============ -->
+<section class="section alt" id="compare">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow" data-i18n="cmp.eyebrow">The honest maths</p>
+      <h2 data-i18n="cmp.title">What you'd pay at home vs. in India, <em>with the whole trip</em> included.</h2>
+      <p data-i18n="cmp.lead">Choose a treatment and where you live. We add flights, visas, the hotel, food and our care package, so you compare the true total and not just the hospital bill.</p>
+    </div>
+
+    <div class="calc reveal">
+      <form class="calc-controls" id="calcForm" onsubmit="return false">
+        <label class="field">
+          <span data-i18n="cmp.treatment">Treatment</span>
+          <select id="cTreatment"></select>
+        </label>
+        <label class="field">
+          <span data-i18n="cmp.country">I live in</span>
+          <select id="cCountry"></select>
+        </label>
+
+        <fieldset class="field">
+          <legend data-i18n="cmp.city">Hospital city in India</legend>
+          <div class="seg" id="cCity"></div>
+        </fieldset>
+
+        <fieldset class="field">
+          <legend data-i18n="cmp.hotel">Where you'll stay</legend>
+          <div class="seg" id="cHotel"></div>
+        </fieldset>
+
+        <fieldset class="field">
+          <legend data-i18n="cmp.pkg">Netraa package</legend>
+          <div class="seg" id="cPackage"></div>
+        </fieldset>
+
+        <label class="toggle">
+          <input type="checkbox" id="cCompanion" checked>
+          <span class="switch"></span>
+          <span data-i18n="cmp.companion">A family member travels with me</span>
+        </label>
+      </form>
+
+      <div class="calc-result" aria-live="polite">
+        <div class="save-big">
+          <span data-i18n="cmp.save">You could save</span>
+          <strong id="rSave">—</strong>
+          <em id="rSavePct">—</em>
+        </div>
+
+        <div class="bars">
+          <div class="bar-row">
+            <div class="bar-label"><span id="rHomeLabel">Private treatment at home</span><strong id="rHome">—</strong></div>
+            <div class="bar home"><i id="bHome"></i></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label"><span data-i18n="cmp.all">Whole trip to India with Netraa</span><strong id="rAll">—</strong></div>
+            <div class="bar india"><i id="bAll"></i></div>
+          </div>
+        </div>
+
+        <dl class="breakdown" id="rBreakdown"></dl>
+
+        <p class="wait-note" id="rWait"></p>
+
+        <h4 class="cities-title" data-i18n="cmp.cities">Hospital price in each city</h4>
+        <div class="city-table" id="rCities"></div>
+
+        <a href="#quote" class="btn btn-primary btn-block" data-i18n="cmp.cta">Get an exact quote for this →</a>
+        <p class="fine" data-i18n="cmp.fine">These are indicative self-pay estimates converted at approximate exchange rates. Your final price depends on your medical reports, the hospital and the surgeon, and we confirm it in writing before you travel.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TREATMENTS ============ -->
+<section class="section" id="treatments">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow" data-i18n="tr.eyebrow">Specialities</p>
+      <h2 data-i18n="tr.title">From a new knee to a new heartbeat.</h2>
+      <p data-i18n="tr.lead">India's leading private hospitals treat patients from more than 150 countries. These are the treatments people most often travel for.</p>
+    </div>
+    <div class="treat-grid reveal" id="treatGrid"></div>
+  </div>
+</section>
+
+<!-- ============ JOURNEY ============ -->
+<section class="section dark" id="journey">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow light" data-i18n="j.eyebrow">Atithi Devo Bhava · The guest is sacred</p>
+      <h2 data-i18n="j.title">India's oldest tradition is treating every guest like family. We built our service around it.</h2>
+    </div>
+
+    <ol class="timeline">
+      <li class="reveal"><span class="step">01</span><h3 data-i18n="j.1t">Send us your reports</h3><p data-i18n="j.1p">A doctor on our panel reviews your case for free and replies within 48 hours with options and quotes from 2–3 hospitals.</p></li>
+      <li class="reveal"><span class="step">02</span><h3 data-i18n="j.2t">Video call your surgeon</h3><p data-i18n="j.2p">Talk to the surgeon before you book anything. You get a fixed, written treatment quote.</p></li>
+      <li class="reveal"><span class="step">03</span><h3 data-i18n="j.3t">Visa, flights and hotel sorted</h3><p data-i18n="j.3p">We arrange the hospital letter for your medical visa and your companion's visa, then book your flights and a hotel near the hospital.</p></li>
+      <li class="reveal"><span class="step">04</span><h3 data-i18n="j.4t">Welcome to India 🌼</h3><p data-i18n="j.4p">Your care companion meets you at the airport with a marigold garland, a local SIM card and a private car. You're never on your own.</p></li>
+      <li class="reveal"><span class="step">05</span><h3 data-i18n="j.5t">Treatment, without the waiting list</h3><p data-i18n="j.5p">Admission, paperwork, interpreters and daily updates for your family back home are all handled for you.</p></li>
+      <li class="reveal"><span class="step">06</span><h3 data-i18n="j.6t">Recover in comfort</h3><p data-i18n="j.6p">Meals that suit your diet, nurse visits and physiotherapy. When your doctor allows it, there are gentle outings too.</p></li>
+      <li class="reveal"><span class="step">07</span><h3 data-i18n="j.7t">Home, still with us</h3><p data-i18n="j.7p">Your records are shared with your doctor back home, and you get 90 days of follow-up video calls with your surgeon.</p></li>
+    </ol>
+
+    <div class="atithi-grid">
+      <div class="atithi reveal"><span>🤝</span><h4 data-i18n="a.1t">A personal care companion</h4><p data-i18n="a.1p">One person who knows your case and answers your calls any time, day or night.</p></div>
+      <div class="atithi reveal"><span>🍽️</span><h4 data-i18n="a.2t">Food that feels like home</h4><p data-i18n="a.2p">Western, Mediterranean, halal, vegetarian or vegan: meals planned around your diet and your doctor's advice.</p></div>
+      <div class="atithi reveal"><span>🗣️</span><h4 data-i18n="a.3t">Your language</h4><p data-i18n="a.3p">Interpreters for English, Spanish, French, Italian, Arabic and more.</p></div>
+      <div class="atithi reveal"><span>👨‍👩‍👧</span><h4 data-i18n="a.4t">Family stays close</h4><p data-i18n="a.4p">Your companion's visa, room and meals are planned along with yours.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STAY ============ -->
+<section class="section" id="stay">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow" data-i18n="st.eyebrow">Recovery stays</p>
+      <h2 data-i18n="st.title">A hotel within minutes of your hospital, booked along with your treatment.</h2>
+      <p data-i18n="st.lead">Every hotel we work with is checked for step-free access, hygiene and how quickly a doctor or nurse can get there. You book the hospital and the hotel in one go.</p>
+    </div>
+    <div class="hotel-grid reveal" id="hotelGrid"></div>
+  </div>
+</section>
+
+<!-- ============ PACKAGES ============ -->
+<section class="section alt" id="packages">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow" data-i18n="pk.eyebrow">Simple, transparent pricing</p>
+      <h2 data-i18n="pk.title">One fixed fee for everything outside the operating theatre.</h2>
+      <p data-i18n="pk.lead">You pay the hospital directly at its standard rates for international patients. Our fee covers the planning and the care around your treatment.</p>
+    </div>
+    <div class="pkg-grid reveal" id="pkgGrid"></div>
+  </div>
+</section>
+
+<!-- ============ WHY INDIA ============ -->
+<section class="section" id="why">
+  <div class="container why">
+    <div class="reveal">
+      <p class="eyebrow" data-i18n="why.eyebrow">Why it's the obvious choice</p>
+      <h2 data-i18n="why.title">Same surgery, same quality. The difference is the price tag.</h2>
+      <p class="lead-sm" data-i18n="why.lead">India's leading private hospitals use the same robotic systems, implants and international accreditations as hospitals in Europe and North America. Many of their senior surgeons trained or practised in the US and UK. What changes is the cost of running a hospital, and that saving comes back to you.</p>
+      <a href="#quote" class="btn btn-primary" data-i18n="why.cta">Start with a free doctor review</a>
+    </div>
+    <ul class="why-list reveal">
+      <li><strong data-i18n="why.1t">Accredited</strong><span data-i18n="why.1p">We only work with hospitals accredited by JCI or NABH.</span></li>
+      <li><strong data-i18n="why.2t">Fast</strong><span data-i18n="why.2p">Planned surgery is usually scheduled within days of your arrival.</span></li>
+      <li><strong data-i18n="why.3t">Transparent</strong><span data-i18n="why.3p">You get a written, fixed quote before you fly, with no surprise bills.</span></li>
+      <li><strong data-i18n="why.4t">Unforgettable</strong><span data-i18n="why.4p">Recover with a view: Kerala's backwaters, Goa's beaches or the palaces of Rajasthan.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ PARTNERS (COMING SOON) ============ -->
+<section class="section partners-sec" id="partners">
+  <div class="container partners reveal">
+    <div>
+      <span class="chip chip-light" data-i18n="pt.soon">Coming soon</span>
+      <h2 data-i18n="pt.title">Care partners in your home country</h2>
+      <p data-i18n="pt.lead">We're building a network of local partners who'll help before you leave and after you're back: transport to the airport, nursing and physio at home, and coordination with your family doctor.</p>
+    </div>
+    <form class="partner-form" id="partnerForm">
+      <p data-i18n="pt.form"><strong>Are you a transport, nursing or home-care provider?</strong><br>Join the partner waitlist.</p>
+      <input type="text" name="org" data-i18n-ph="pt.org" placeholder="Organisation name" required>
+      <input type="email" name="email" data-i18n-ph="pt.email" placeholder="Work email" required>
+      <select name="country" id="pCountry" required></select>
+      <button class="btn btn-primary" type="submit" data-i18n="pt.submit">Join the waitlist</button>
+      <p class="form-msg" role="status"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section" id="faq">
+  <div class="container narrow">
+    <div class="section-head reveal center">
+      <p class="eyebrow" data-i18n="faq.eyebrow">Questions</p>
+      <h2 data-i18n="faq.title">What everyone asks first.</h2>
+    </div>
+    <div class="faq reveal">
+      <details><summary data-i18n="faq.q1">Is it safe to have surgery in India?</summary><p data-i18n="faq.a1">We only work with hospitals accredited by JCI (Joint Commission International) or NABH, India's national hospital accreditation board. Before you commit to anything, you see your surgeon's credentials and talk to them on a video call.</p></details>
+      <details><summary data-i18n="faq.q2">Why is it so much cheaper?</summary><p data-i18n="faq.a2">Salaries, property, insurance and admin all cost much less in India, and hospitals there see very high patient volumes. The equipment, implants and medicines are the same international brands used elsewhere.</p></details>
+      <details><summary data-i18n="faq.q3">How does the visa work?</summary><p data-i18n="faq.a3">India offers an e-Medical visa for patients and an e-Medical Attendant visa for companions. Both are applied for online, and your hospital's invitation letter, which we arrange, supports the application.</p></details>
+      <details><summary data-i18n="faq.q4">Do the doctors and staff speak English?</summary><p data-i18n="faq.a4">Yes. English is the working language of Indian hospitals, and every international-patient team speaks it. For Spanish, French, Italian or Arabic, we provide an interpreter.</p></details>
+      <details><summary data-i18n="faq.q5">How does Netraa make money?</summary><p data-i18n="faq.a5">From the fixed package fee shown on this page, plus partnership fees from hospitals and hotels. Those partnership fees never increase what you pay: you're always charged the hospital's standard international-patient rate.</p></details>
+      <details><summary data-i18n="faq.q6">What if something goes wrong after I fly home?</summary><p data-i18n="faq.a6">Every package includes follow-up video calls with your surgeon. We send your full records to your doctor at home, and complications covered by the hospital's own policy are handled at no extra cost.</p></details>
+      <details><summary data-i18n="faq.q7">Can my health insurance pay for it?</summary><p data-i18n="faq.a7">Some international and employer plans cover treatment abroad. Send us your policy details and we'll help you check, and arrange the paperwork your insurer needs.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUOTE ============ -->
+<section class="section quote-sec" id="quote">
+  <div class="container quote">
+    <div class="quote-copy reveal">
+      <p class="eyebrow light" data-i18n="q.eyebrow">Free, with no obligation</p>
+      <h2 data-i18n="q.title">Get a doctor's opinion and a fixed quote within 48 hours.</h2>
+      <p data-i18n="q.lead">Tell us what you need. A medical coordinator will reply by email or WhatsApp. Your details are only shared with the hospitals you approve.</p>
+      <a class="wa" id="waLink" href="#" target="_blank" rel="noopener">💬 <span data-i18n="q.wa">Chat with us on WhatsApp</span></a>
+    </div>
+    <form class="quote-form reveal" id="quoteForm">
+      <div class="row2">
+        <label class="field"><span data-i18n="q.name">Full name</span><input name="name" required autocomplete="name"></label>
+        <label class="field"><span data-i18n="q.email">Email</span><input name="email" type="email" required autocomplete="email"></label>
+      </div>
+      <div class="row2">
+        <label class="field"><span data-i18n="q.phone">Phone / WhatsApp</span><input name="phone" type="tel" autocomplete="tel"></label>
+        <label class="field"><span data-i18n="q.country">Country</span><select name="country" id="qCountry"></select></label>
+      </div>
+      <label class="field"><span data-i18n="q.treatment">Treatment</span><select name="treatment" id="qTreatment"></select></label>
+      <label class="field"><span data-i18n="q.msg">Tell us about your condition (optional)</span><textarea name="message" rows="3" data-i18n-ph="q.msgPh" placeholder="Diagnosis, when you'd like to travel, any questions…"></textarea></label>
+      <label class="consent"><input type="checkbox" required> <span data-i18n="q.consent">I agree that Netraa can contact me about this request and share my details with the hospitals I approve.</span></label>
+      <button class="btn btn-primary btn-lg btn-block" type="submit" data-i18n="q.submit">Request my free quote</button>
+      <p class="form-msg" role="status"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container foot">
+    <div>
+      <img src="assets/logo.svg" alt="Netraa.ai" class="foot-logo" width="180" height="44">
+      <p data-i18n="f.tag">World-class treatment in India, with care like family.</p>
+    </div>
+    <div class="foot-links">
+      <a href="#compare" data-i18n="nav.compare">Compare prices</a>
+      <a href="#treatments" data-i18n="nav.treatments">Treatments</a>
+      <a href="#packages" data-i18n="nav.packages">Packages</a>
+      <a href="legal.html" data-i18n="f.legal">Privacy &amp; disclaimer</a>
+      <a id="mailLink" href="#">care@netraa.ai</a>
+    </div>
+  </div>
+  <div class="container disclaimer">
+    <p><span data-i18n="f.disc">Netraa is a medical travel facilitator, not a healthcare provider, and nothing on this site is medical advice. Treatment decisions are made by you and your licensed doctor. Prices are indicative estimates and may change. Waiting-time figures come from the official and published sources linked above.</span> © <span id="year"></span> Netraa.ai</p>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
